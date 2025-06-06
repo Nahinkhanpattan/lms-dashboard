@@ -55,6 +55,3 @@ button {
 }
 
 /* Card hover effects */
-.card-hover {
-  @apply transition-all duration-200 ease-in-out hover:shadow-lg;
-}
