@@ -36,7 +36,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
@@ -58,7 +58,7 @@ export default function Header() {
               <div>
                 <button
                   onClick={() => setShowDropdown(!showDropdown)}
-                  className="flex items-center space-x-2 focus:outline-none"
+                  className="flex items-center space-x-2 focus:outline-none hover:opacity-80 transition-opacity"
                 >
                   <FaUserCircle className="h-8 w-8 text-gray-500" />
                   <span className="text-sm font-medium text-gray-700">{user?.name}</span>
@@ -66,7 +66,7 @@ export default function Header() {
               </div>
 
               {showDropdown && (
-                <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
                   <div className="py-1">
                     <Link
                       to="/profile"
