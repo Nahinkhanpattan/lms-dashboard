@@ -7,12 +7,12 @@ import {
   FaTasks,
   FaComments,
   FaCode,
+  FaCommentDots
 } from 'react-icons/fa';
 
 export default function Sidebar() {
   const { user } = useAuth();
   const location = useLocation();
-  const isInstructor = user?.role === 'instructor';
 
   const menuItems = [
     {
@@ -45,10 +45,15 @@ export default function Sidebar() {
       icon: <FaCode />,
       path: '/programming',
     },
+    {
+      name: 'Doubt Box',
+      icon: <FaCommentDots />,
+      path: '/doubts',
+    }
   ];
 
   return (
-    <div className="h-full bg-secondary text-white w-64 flex-shrink-0">
+    <div className="h-full bg-gray-800 text-white w-64 flex-shrink-0">
       <div className="p-4">
         <nav className="space-y-2">
           {menuItems.map((item) => (
